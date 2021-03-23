@@ -20,9 +20,6 @@
 body {
     background-color: var(--bg-color);
     font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .container {
     display: flex;
@@ -33,15 +30,16 @@ body {
 }
 
 /* ===== CARD ===== */
-.container .card.two .title span {
-    font-size: 14px;
-    color: #a6b5ba;
+.container .card#two .title span {
+    font-size: 12px;
+    color: #a5b5ba;
     display: block;
     padding-top: 6px;
+    font-weight: 600;
 }
 .card {
     height: 769px;
-    width: 29%;
+    width: 365px;
     margin-bottom: 100px;
 }
 .card .price.two {
@@ -68,70 +66,76 @@ body {
     z-index: 1;
 }
 .box-img .new img {
-    top: -13px;
-    left: -13px;
     width: 65px;
     height: 65px;
     position: relative;
-    filter: none;
+    transform: translate(-21%, -21%);
 }
 .box-img .new p {
     position: relative;
     top: -57px;
-    left: 5px;
+    left: 3px;
     font-family: 'Montserrat', sans-serif;
     color: var(--white-color);
     font-size: 12px;
     font-weight: bold;
 }
 .box-img .price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 120px;
     height: 120px;
     background-color: var(--white-color);
     position: absolute;
     border-radius: 50%;
     text-align: center;
-    top: -60px;
-    left: 33%;
-    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
 }
 .box-img .price h2 {
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--btn-one-color);
     font-weight: 100;
-    margin-top: 32px;
     font-size: 27px;
 }
 .box-img .price p {
     color: var(--p-color);
 }
 .box-img img {
-    max-width: 100%;
+    width: 100%;
     height: 272px;
-    filter: brightness(0.5);
+    position: relative;
     z-index: -1;
 }
-.box-img img.last-img {
-    filter: none;
-}
+
 .box-img .title {
     position: relative;
     font-size: 36px;
     color: var(--white-color);
-    top: -165px;
+    top: -60%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    z-index: 10;
 }
 .box-img .title.special {
     margin-top: -6px;
 }
+.box-img .fake {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    background-color: #4c5d80;
+    opacity: 0.8;
+}
 
 /* ===== DESCRIP ===== */
-.descrip {
-
-}
 .descrip .subtitle {
-    height: 92px;
+    padding-bottom: 20px;
     background-color: var(--white-color);
     text-align: center;
 }
@@ -148,50 +152,49 @@ body {
     padding-top: 5px;
 }
 .descrip .text {
-    height: 52px;
     background-color: var(--white-color);
     text-align: center;
-    line-height: 52px;
     color: var(--text-color);
+    padding: 18px 0;
 }
 .descrip .gray {
     background-color: #f4f6f7;
 }
 
 /* =====BUTTON ===== */
-.btn {
-    height: 150px;
+.btn-box {
+    padding: 55px 0;
     background-color: var(--white-color);
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btn.one button {
+.btn-box.one button {
     background-color: var(--white-color);
     border: 1px solid var(--btn-one-color);
     color: var(--btn-one-color);
 }
-.btn.one button:hover {
+.btn-box.one button:hover {
     background-color: var(--btn-one-color);
     color: var(--white-color);
     cursor: pointer;
 }
-.btn.two button {
+.btn-box.two button {
     background-color: var(--white-color);
     border: 1px solid var(--btn-two-color);
     color: var(--btn-two-color);
 }
-.btn.two button:hover {
+.btn-box.two button:hover {
     background-color: var(--btn-two-color);
     color: var(--white-color);
     cursor: pointer;
 }
-.btn.three button {
+.btn-box.three button {
     background-color: var(--white-color);
     border: 1px solid var(--btn-three-color);
     color: var(--btn-three-color);
 }
-.btn.three button:hover {
+.btn-box.three button:hover {
     background-color: var(--btn-three-color);
     color: var(--white-color);
     cursor: pointer;
@@ -204,26 +207,14 @@ button {
 }
 
 /* ===== RESPONSIVE ===== */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-    .card {
-        width: 45%;
-    }
-    .img img {
+/* @media (max-width: 1024px) and (min-width: 768px) {
+    .box-img img {
         width: 100%;
-    }
-    .img .price {
-        left: 37%;
     }
 }
 
-@media screen and (max-width: 768px)  {
-    .card {
-        width: 80%;
-    }
-    .img img {
+@media (max-width: 768px)  {
+    .box-img img {
         width: 100%;
     }
-    .img .price {
-        left: 41%;
-    }
-}
+} */
