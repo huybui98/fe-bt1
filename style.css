@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+
+:root {
+    --bg-color: #cad3d3;
+    --p-color: #99a9b5;
+    --white-color: #fff;
+    --text-color: #5f727f;
+
+    --btn-one-color: #2196f7;
+    --btn-two-color: #6c136f;
+    --btn-three-color: #32ad1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* ===== CARD ===== */
+.container .card#two .title span {
+    font-size: 12px;
+    color: #a5b5ba;
+    display: block;
+    padding-top: 6px;
+    font-weight: 600;
+}
+.card {
+    width: 365px;
+    margin-bottom: 100px;
+}
+.card .price.two {
+    background-color: #2c2e3d;
+}
+.card .price.two h2 {
+    color: #d74498;
+}
+.card .price.two p {
+    color: var(--p-color);
+}
+.card .price.three h2 {
+    color: var(--btn-three-color);
+}
+
+/* ===== BOX IMG ===== */
+.box-img {
+    height: 272px;
+    position: relative;
+}
+.box-img .new {
+    z-index: 1;
+    position: absolute;
+}
+.box-img .new img {
+    width: 65px;
+    height: 65px;
+    position: relative;
+    transform: translate(-21%, -21%);
+}
+.box-img .new p {
+    position: absolute;
+    top: 16%;
+    left: 4%;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
+}
+.box-img .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: var(--white-color);
+}
+.box-img .price h2 {
+    font-weight: 100;
+    font-size: 27px;
+    color: var(--btn-one-color);
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.box-img .price p {
+    color: var(--p-color);
+}
+.box-img img {
+    width: 100%;
+    height: 272px;
+    z-index: -1;
+    position: relative;
+}
+
+.box-img .title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 10;
+    font-size: 36px;
+    text-align: center;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
+}
+.box-img .title.special {
+    margin-top: -4  px;
+}
+.box-img .fake {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    opacity: 0.8;
+    background-color: #4c5d80;
+}
+
+/* ===== DESC ===== */
+.desc .subtitle {
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: var(--white-color);
+}
+.desc .subtitle h2 {
+    font-size: 24px;
+    color: #748590;
+    font-weight: 300;
+    padding-top: 15px;
+}
+.desc .subtitle p {
+    font-size: 14px;
+    color: var(--p-color);
+    font-weight: 400;
+    padding-top: 5px;
+}
+.desc .text {
+    padding: 18px 0;
+    text-align: center;
+    color: var(--text-color);
+    background-color: var(--white-color);
+}
+.desc .gray {
+    background-color: #f4f6f7;
+}
+
+/* ===== BUTTON ===== */
+.btn-box {
+    padding: 55px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-color);
+}
+.btn-box.one button {
+    color: var(--btn-one-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--btn-one-color);
+}
+.btn-box.one button:hover {
+    color: var(--white-color);
+    background-color: var(--btn-one-color);
+}
+.btn-box.two button {
+    color: var(--btn-two-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--btn-two-color);
+}
+.btn-box.two button:hover {
+    color: var(--white-color);
+    background-color: var(--btn-two-color);
+}
+.btn-box.three button {
+    color: var(--btn-three-color);
+    background-color: var(--white-color);
+    border: 1px solid var(--btn-three-color);
+}
+.btn-box.three button:hover {
+    color: var(--white-color);
+    background-color: var(--btn-three-color);
+}
+button {
+    font-size: 16px;
+    padding: 12px 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+button:hover {
+    cursor: pointer;
+}
