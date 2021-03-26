@@ -20,34 +20,30 @@
 body {
     background-color: var(--bg-color);
     font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .container {
-    display: flex;
-    max-width: 1560px;
-    justify-content: space-evenly;
     margin-top: 100px;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 /* ===== CARD ===== */
-.container .card.two .title span {
-    font-size: 14px;
-    color: #a6b5ba;
+.container .card#two .title span {
+    font-size: 12px;
+    color: #a5b5ba;
     display: block;
     padding-top: 6px;
+    font-weight: 600;
 }
 .card {
-    height: 769px;
-    width: 29%;
+    width: 365px;
     margin-bottom: 100px;
 }
 .card .price.two {
     background-color: #2c2e3d;
 }
-.card .price.two h2{
+.card .price.two h2 {
     color: #d74498;
 }
 .card .price.two p {
@@ -59,171 +55,150 @@ body {
 
 /* ===== BOX IMG ===== */
 .box-img {
-    position: relative;
     height: 272px;
-    width: auto;
+    position: relative;
 }
 .box-img .new {
-    position: absolute;
     z-index: 1;
+    position: absolute;
 }
 .box-img .new img {
-    top: -13px;
-    left: -13px;
     width: 65px;
     height: 65px;
     position: relative;
-    filter: none;
+    transform: translate(-21%, -21%);
 }
 .box-img .new p {
-    position: relative;
-    top: -57px;
-    left: 5px;
-    font-family: 'Montserrat', sans-serif;
-    color: var(--white-color);
+    position: absolute;
+    top: 16%;
+    left: 4%;
     font-size: 12px;
     font-weight: bold;
+    color: var(--white-color);
+    font-family: 'Montserrat', sans-serif;
 }
 .box-img .price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 120px;
     height: 120px;
-    background-color: var(--white-color);
-    position: absolute;
     border-radius: 50%;
     text-align: center;
-    top: -60px;
-    left: 33%;
-    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    background-color: var(--white-color);
 }
 .box-img .price h2 {
-    font-family: 'Source Sans Pro', sans-serif;
-    color: var(--btn-one-color);
     font-weight: 100;
-    margin-top: 32px;
     font-size: 27px;
+    color: var(--btn-one-color);
+    font-family: 'Source Sans Pro', sans-serif;
 }
 .box-img .price p {
     color: var(--p-color);
 }
 .box-img img {
-    max-width: 100%;
+    width: 100%;
     height: 272px;
-    filter: brightness(0.5);
     z-index: -1;
-}
-.box-img img.last-img {
-    filter: none;
-}
-.box-img .title {
     position: relative;
+}
+
+.box-img .title {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 10;
     font-size: 36px;
-    color: var(--white-color);
-    top: -165px;
     text-align: center;
+    color: var(--white-color);
     font-family: 'Montserrat', sans-serif;
 }
 .box-img .title.special {
-    margin-top: -6px;
+    margin-top: -4  px;
+}
+.box-img .fake {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    opacity: 0.8;
+    background-color: #4c5d80;
 }
 
-/* ===== DESCRIP ===== */
-.descrip {
-
-}
-.descrip .subtitle {
-    height: 92px;
-    background-color: var(--white-color);
+/* ===== DESC ===== */
+.desc .subtitle {
+    padding-bottom: 20px;
     text-align: center;
+    background-color: var(--white-color);
 }
-.descrip .subtitle h2 {
+.desc .subtitle h2 {
     font-size: 24px;
     color: #748590;
     font-weight: 300;
     padding-top: 15px;
 }
-.descrip .subtitle p {
+.desc .subtitle p {
     font-size: 14px;
     color: var(--p-color);
     font-weight: 400;
     padding-top: 5px;
 }
-.descrip .text {
-    height: 52px;
-    background-color: var(--white-color);
+.desc .text {
+    padding: 18px 0;
     text-align: center;
-    line-height: 52px;
     color: var(--text-color);
+    background-color: var(--white-color);
 }
-.descrip .gray {
+.desc .gray {
     background-color: #f4f6f7;
 }
 
-/* =====BUTTON ===== */
-.btn {
-    height: 150px;
-    background-color: var(--white-color);
+/* ===== BUTTON ===== */
+.btn-box {
+    padding: 55px 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    background-color: var(--white-color);
 }
-.btn.one button {
+.btn-box.one button {
+    color: var(--btn-one-color);
     background-color: var(--white-color);
     border: 1px solid var(--btn-one-color);
-    color: var(--btn-one-color);
 }
-.btn.one button:hover {
-    background-color: var(--btn-one-color);
+.btn-box.one button:hover {
     color: var(--white-color);
-    cursor: pointer;
+    background-color: var(--btn-one-color);
 }
-.btn.two button {
+.btn-box.two button {
+    color: var(--btn-two-color);
     background-color: var(--white-color);
     border: 1px solid var(--btn-two-color);
-    color: var(--btn-two-color);
 }
-.btn.two button:hover {
-    background-color: var(--btn-two-color);
+.btn-box.two button:hover {
     color: var(--white-color);
-    cursor: pointer;
+    background-color: var(--btn-two-color);
 }
-.btn.three button {
+.btn-box.three button {
+    color: var(--btn-three-color);
     background-color: var(--white-color);
     border: 1px solid var(--btn-three-color);
-    color: var(--btn-three-color);
 }
-.btn.three button:hover {
-    background-color: var(--btn-three-color);
+.btn-box.three button:hover {
     color: var(--white-color);
-    cursor: pointer;
+    background-color: var(--btn-three-color);
 }
 button {
-    width: 169px;
-    height: 50px;
     font-size: 16px;
+    padding: 12px 30px;
     font-family: 'Montserrat', sans-serif;
 }
-
-/* ===== RESPONSIVE ===== */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-    .card {
-        width: 45%;
-    }
-    .img img {
-        width: 100%;
-    }
-    .img .price {
-        left: 37%;
-    }
-}
-
-@media screen and (max-width: 768px)  {
-    .card {
-        width: 80%;
-    }
-    .img img {
-        width: 100%;
-    }
-    .img .price {
-        left: 41%;
-    }
+button:hover {
+    cursor: pointer;
 }
